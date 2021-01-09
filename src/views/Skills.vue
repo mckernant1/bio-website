@@ -7,18 +7,18 @@
           <v-card-title class="headline">
             {{ experience.name }}
             <v-spacer/>
-            {{experience.dateRange}}
+            {{ experience.dateRange }}
           </v-card-title>
           <v-divider></v-divider>
           <v-card-text class="title">
             <h3>Technologies Used</h3>
             <ul>
-              <li v-for="(tech, index) in experience.technologies" :key="index">{{tech}}</li>
+              <li v-for="(tech, index) in experience.technologies" :key="index">{{ tech }}</li>
             </ul>
             <br/>
             <h3>Description</h3>
             <br/>
-            <p>{{experience.desc}}</p>
+            <p>{{ experience.desc }}</p>
           </v-card-text>
         </v-card>
       </v-flex>
@@ -66,6 +66,16 @@ export default {
           'Spring Framework'
         ],
         desc: `I worked at Peapod with the Platform team to improve some internal tools`
+      },
+      {
+        name: 'Assistant Database Administrator at Northwestern University',
+        dateRange: 'June 2016 - February 2020',
+        technologies: [
+          'Excel',
+          'Python',
+          'AutoCAD'
+        ],
+        desc: `My High School job. Did a lot of data entry, used python to help!`
       }
     ]
   })
