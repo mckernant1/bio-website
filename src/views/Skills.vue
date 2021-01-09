@@ -52,7 +52,9 @@ export default {
           'Homebrew',
           'Angular'
         ],
-        desc: `I work on a lot of personal projects from discord bots to websites`
+        desc: `I work on a lot of personal projects from discord bots to websites.
+        Check out my Github in the top right!
+        This site was created with Vue.js and deployed with AWS Amplify`
       },
       {
         name: 'SDE Intern at Peapod',
