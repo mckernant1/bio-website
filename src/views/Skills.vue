@@ -1,28 +1,24 @@
 <template>
-  <v-container fill-height grid-list-md text-xs-left >
+  <v-container fill-height grid-list-md text-xs-left>
     <v-layout row align-top justify-center>
-      <v-flex xs6 sm6 class="pa-3">
-        <v-card-title class="display-1">Skills</v-card-title>
-        <v-card class="mb-3" dark v-for="(skill, index) in skills" :key="index" flat>
+      <v-flex xs12 sm12 class="pa-3">
+        <v-card-title class="display-1">Experience</v-card-title>
+        <v-card class="mb-3" dark v-for="(experience, index) in experiences" :key="index" flat>
           <v-card-title class="headline">
-            {{ skill.name }}
-            <v-spacer></v-spacer>
-            Proficiency: {{ skill.proficiency }}
+            {{ experience.name }}
+            <v-spacer/>
+            {{ experience.dateRange }}
           </v-card-title>
           <v-divider></v-divider>
           <v-card-text class="title">
-            {{ skill.desc }}
-          </v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs6 sm6 class="pa-3">
-        <v-card-title class="display-1">Experience</v-card-title>
-        <v-card class="mb-3" dark v-for="(project, index) in projects" :key="index" flat >
-          <v-card-title class="headline">
-            {{ project.name }}
-          </v-card-title>
-          <v-divider></v-divider>
-          <v-card-text class="title" v-html="project.desc">
+            <h3>Technologies Used</h3>
+            <ul>
+              <li v-for="(tech, index) in experience.technologies" :key="index">{{ tech }}</li>
+            </ul>
+            <br/>
+            <h3>Description</h3>
+            <br/>
+            <p>{{ experience.desc }}</p>
           </v-card-text>
         </v-card>
       </v-flex>
@@ -35,104 +31,51 @@
 export default {
   name: 'Skills',
   data: () => ({
-    skills: [
+    experiences: [
       {
-        name: 'Java',
-        desc: `As of right now I don't use Java a whole ton,
-        but it was the language I started on.
-        I have used a lot of the Java collections and other pieces the JDK provides.
-        I have also used a lot of external libraries with Gradle.`,
-        proficiency: 9
+        name: 'SDE I at Amazon Web Services',
+        dateRange: 'February 2020 - Present',
+        technologies: [
+          'Java',
+          'Python',
+          'Apache Spark'
+        ],
+        desc: `I am an SDE at AWS currently working on DynamoDB`
       },
       {
-        name: 'Python',
-        desc: `It seems required that everyone knows at
-        least a little bit of python these days,
-        so I have followed suit.
-        I have an understanding of the general syntax and structure.
-        However, I haven't used a lot of the packages that it can offer`,
-        proficiency: 6
+        name: 'Personal Projects',
+        dateRange: 'Always :]',
+        technologies: [
+          'Kotlin',
+          'Rust',
+          'AWS (ECS, Amplify, CodePipeline, and a mix of others)',
+          'Homebrew',
+          'Angular'
+        ],
+        desc: `I work on a lot of personal projects from discord bots to websites.
+        Check out my Github in the top right!
+        This site was created with Vue.js and deployed with AWS Amplify`
       },
       {
-        name: 'Spring',
-        desc: `I got curious about Spring when I saw it and had no idea what it did.
-        I thought the concept of IoC was really cool so I pushed for Spring Boot in our Capstone Project.
-        I have been able to work with it more and more throughout the project
-        and I'm finding it very fun to work with. I also used Spring Cloud Gateway at peapod to create a
-        flexible sidecar that offers the filters as middleware`,
-        proficiency: 6
+        name: 'SDE Intern at Peapod',
+        dateRange: 'June 2018 - August 2019',
+        technologies: [
+          'Kotlin',
+          'Rust',
+          'Vue.js',
+          'Spring Framework'
+        ],
+        desc: `I worked at Peapod with the Platform team to improve some internal tools`
       },
       {
-        name: 'Rust',
-        desc: `Rust is my favorite language that I haven't had an opportunity to use.
-        I took operating systems and then I heard about rust. I looked at it and the way that
-        they handled data racing was insane to me. They found a simple solution to a
-        complex problem. I have used it to mess around and make some command line tools on my homebrew tap.`,
-        proficiency: 5
-      },
-      {
-        name: 'Kotlin',
-        desc: `Kotlin is the Java replacement I didnt know I needed. The Rest API for Headway
-        is written in Kotlin and I find new cool tools in it every time I work with it.
-        I also used it along with spring while at Peapod`,
-        proficiency: 7
-      },
-      {
-        name: 'Vue.js',
-        desc: `Ever since I was introduced to Vue at Peapod I have loved it.
-        It is my ideal front end because I don't have to do CSS when using Vuetify.
-        This site was made with Vue/Vuetify!`,
-        proficiency: 8
-      },
-      {
-        name: 'Angular',
-        desc: 'I tried out Angular as a Vue alternative over the summer. I really like the additional organization it offers.',
-        proficiency: 5
-      }
-    ],
-    projects: [
-      {
-        name: 'Peapod | Work Experience | June 2018 - Present',
-        desc: `Peapod is a company located in downtown Chicago.
-        I had the pleasure of having an internship program over the 2018 Summer.
-        I started working on a Vue project initially,
-        and then they offered me a remote position for while I was at school.
-        I have worked on a number of different things including: Angular and Vue Integration,
-        Cross platform webview App research, the peapod Vue component library, Creating a sidecar with
-        Spring Cloud Gateway, researching Kubernetes and Docker, performance testing various applications with
-        Gatling (Scala) and Vegeta (Go), and creating small front to back applications with Angular and Spring`
-      },
-      {
-        name: 'Homebrew tools',
-        desc: 'I have a homebrew tap where I make my own command line tools.' +
-          '<ul>' +
-          '<li><a href="https://github.com/mckernant1/project_manager">Git Repo Manager</a></li>' +
-          '<li><a href="https://github.com/mckernant1/timeit">Command Line Timer</a></li>' +
-          '<li><a href="https://github.com/mckernant1/hasher">File Hasher</a></li>' +
-          '</ul>'
-      },
-      {
-        name: 'Flyer Enterprises | Work Experience | November 2017 - August 2018',
-        desc: `Flyer Enterprises (FE) is the student run business at our school.
-        I applied and was accepted to a development position. I was assigned to App development
-        and contracting on Shopify. I quit only after Peapod offered me the remote position`
-      },
-      {
-        name: 'Headway | Capstone Project | January 2019 - Present',
-        desc: `This is my Capstone Project. It is a site for interactive classroom use.
-        Every account can be both an instructor and a student.
-        I am working in a group with 3 of my friends,
-        and we are collaborating through discord constantly to accomplish our weekly goals.
-        Now Accessible at <a target="_blank" href="https://headway.dev">headway.dev</a>`
-      },
-      {
-        name: 'My Bio Site | Personal Project | Updated often',
-        desc: 'This Site! The repo can be seen <a target="_blank" href="https://bitbucket.org/mckernant1/me.simplycomplicated.dev/src/master/">here</a>'
-      },
-      {
-        name: 'Code Snip',
-        desc: 'This is where i keep all my code snippets that I use a ton. ' +
-          'Can be seen  <a href="https://cs.simplycomplicated.dev/" target="_blank">Here</a>'
+        name: 'Assistant Database Administrator at Northwestern University',
+        dateRange: 'June 2016 - February 2020',
+        technologies: [
+          'Excel',
+          'Python',
+          'AutoCAD'
+        ],
+        desc: `My High School job. Did a lot of data entry, used python to help!`
       }
     ]
   })

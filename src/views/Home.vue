@@ -19,9 +19,7 @@
           </v-card-title>
           <v-divider light></v-divider>
           <v-card-text class="headline">
-            I am currently looking for full time employment after I graduate in December 2019!
-            Please contact me if you are interested in hiring me.
-            My LinkedIn, Github, Resume, and email are at the top right.
+            I am currently working at AWS, but I am usually looking for fun projects so feel free to reach out!
           </v-card-text>
         </v-card>
         <v-card class="ma-3" dark>
@@ -40,9 +38,6 @@
           <v-card-title class="display-1">
             Relevant Coursework
           </v-card-title>
-          <v-card-text>
-            All of these courses will be completed by December 2019
-          </v-card-text>
           <v-divider light></v-divider>
           <v-card-text class="headline">
             <ul>
