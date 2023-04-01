@@ -1,48 +1,51 @@
 <template>
-  <v-app class="grey lighten-2">
-    <v-toolbar dark tabs>
-        <v-toolbar-title class="pr-3">Tom McKernan</v-toolbar-title>
-      <v-flex>
-        <v-tabs
-          centered
-          v-model="currentItem"
-          color="transparent"
-          slider-color="white"
-          icons-and-text
-        >
-          <v-tab href="#home">
-            Home
-          </v-tab>
-          <v-tab href="#skills">
-            Skills & Experience
-          </v-tab>
-        </v-tabs>
-      </v-flex>
+  <v-app>
+    <v-card class="bg-blue-grey-darken-1">
+      <v-toolbar class="bg-grey-darken-3">
+        <v-toolbar-title>Tom McKernan</v-toolbar-title>
 
-      <v-toolbar-items>
-        <v-btn @click="openGithub" flat>
-          <i class="fab fa-github fa-2x"></i>
-        </v-btn>
-        <v-btn @click="openLinkedIn" flat>
-          <i class="fab fa-linkedin fa-2x"></i>
-        </v-btn>
-        <v-btn @click="downloadPDF" flat>
-          <i class="fas fa-file-alt fa-2x"></i>
-        </v-btn>
-        <v-btn @click="sendEmail" flat>
-          <i class="fas fa-envelope-square fa-2x"></i>
-        </v-btn>
-      </v-toolbar-items>
+          <v-spacer/>
 
-    </v-toolbar>
-    <v-tabs-items v-model="currentItem">
-      <v-tab-item :value="'home'">
-        <Home></Home>
-      </v-tab-item>
-      <v-tab-item :value="'skills'">
-        <Skills></Skills>
-      </v-tab-item>
-    </v-tabs-items>
+          <v-tabs class="bg-grey-darken-3">
+            <v-tabs
+              v-model="currentItem"
+            >
+              <v-tab value="home">
+                Home
+              </v-tab>
+              <v-tab value="skills">
+                Skills & Experience
+              </v-tab>
+            </v-tabs>
+          </v-tabs>
+          <v-spacer/>
+
+        <v-toolbar-items>
+          <v-btn @click="openGithub" flat>
+            <i class="fab fa-github fa-2x"></i>
+          </v-btn>
+          <v-btn @click="openLinkedIn" flat>
+            <i class="fab fa-linkedin fa-2x"></i>
+          </v-btn>
+          <v-btn @click="downloadPDF" flat>
+            <i class="fas fa-file-alt fa-2x"></i>
+          </v-btn>
+          <v-btn @click="sendEmail" flat>
+            <i class="fas fa-envelope-square fa-2x"></i>
+          </v-btn>
+        </v-toolbar-items>
+
+      </v-toolbar>
+
+      <v-window v-model="currentItem">
+        <v-window-item :value="'home'">
+          <Home></Home>
+        </v-window-item>
+        <v-window-item :value="'skills'">
+          <Skills></Skills>
+        </v-window-item>
+      </v-window>
+    </v-card>
   </v-app>
 </template>
 

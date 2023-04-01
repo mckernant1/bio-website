@@ -1,7 +1,7 @@
 <template>
-  <v-container fill-height grid-list-md text-xs-left>
-    <v-layout row align-top justify-center>
-      <v-flex xs12 sm12 class="pa-3">
+  <v-container class="fill-height grid-list-md text-xs-left">
+    <v-layout class="row align-top justify-center">
+      <v-container>
         <v-card-title class="display-1">Experience</v-card-title>
         <v-card class="mb-3" dark v-for="(experience, index) in experiences" :key="index" flat>
           <v-card-title class="headline">
@@ -10,18 +10,18 @@
             {{ experience.dateRange }}
           </v-card-title>
           <v-divider></v-divider>
-          <v-card-text class="title">
+          <v-card-text>
             <h3>Technologies Used</h3>
-            <ul>
+            <ul class="pl-5">
               <li v-for="(tech, index) in experience.technologies" :key="index">{{ tech }}</li>
             </ul>
             <br/>
             <h3>Description</h3>
             <br/>
-            <p>{{ experience.desc }}</p>
+            <p class="pl-3 pr-3 ">{{ experience.desc }}</p>
           </v-card-text>
         </v-card>
-      </v-flex>
+      </v-container>
     </v-layout>
   </v-container>
 </template>
@@ -33,14 +33,26 @@ export default {
   data: () => ({
     experiences: [
       {
+        name: 'SDE II at Amazon Web Services',
+        dateRange: 'March 2022 - Present',
+        technologies: [
+          'Rust',
+          'Java',
+          'Aws Cdk'
+        ],
+        desc: `A Slightly larger role where I started to mentor other people who have joined the org.
+        More design reviews and looking over other peoples work. As well as building out new canaries with Aws CDK.`
+      },
+      {
         name: 'SDE I at Amazon Web Services',
-        dateRange: 'February 2020 - Present',
+        dateRange: 'February 2020 - March 2022',
         technologies: [
           'Java',
           'Python',
           'Apache Spark'
         ],
-        desc: `I am an SDE at AWS currently working on DynamoDB`
+        desc: `I am an SDE at AWS currently working on DynamoDB. Lots of working on distributed systems.
+        Lots of complicated design docs and review processes to make sure the cloud is safe.`
       },
       {
         name: 'Personal Projects',

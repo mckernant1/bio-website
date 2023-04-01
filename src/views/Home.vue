@@ -1,8 +1,8 @@
 <template>
-  <v-container fill-height text-xs-left>
-    <v-layout row align-top justify-center>
-      <v-flex xs12>
-        <v-card class="ma-3" dark>
+  <v-container>
+    <v-layout>
+      <v-container>
+        <v-card class="ma-3">
           <v-card-title class="display-1">
             Bio
           </v-card-title>
@@ -46,7 +46,7 @@
               <li>CPS 472: Computer & Network Security</li>
               <li>CPS Special topics: Secure Application Development</li>
               <li>CPS 352: Concepts & Implementations of Programming Languages</li>
-              <li>CPS 490 & 491: Capstone </li>
+              <li>CPS 490 & 491: Capstone</li>
               <li>CPS 342: Emerging Programming Languages</li>
               <li>MTH 301: Matrix Theory</li>
               <li>MTH 361: Introduction to Abstract Algebra</li>
@@ -66,10 +66,14 @@
             </ul>
           </v-card-text>
         </v-card>
-      </v-flex>
+      </v-container>
     </v-layout>
   </v-container>
 </template>
+
+<style>
+
+</style>
 
 <script>
 export default {
