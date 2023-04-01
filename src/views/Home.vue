@@ -28,7 +28,7 @@
           </v-card-title>
           <v-divider light></v-divider>
           <v-card-text class="headline">
-            <ul>
+            <ul class="pl-5">
               <li>B.S. in Computer Science</li>
               <li>Minor in Math</li>
             </ul>
@@ -40,7 +40,7 @@
           </v-card-title>
           <v-divider light></v-divider>
           <v-card-text class="headline">
-            <ul>
+            <ul class="pl-5">
               <li>CPS 356: Operating Systems</li>
               <li>CPS Special topics: Web 3.0 Semantics</li>
               <li>CPS 472: Computer & Network Security</li>
@@ -59,7 +59,7 @@
           </v-card-title>
           <v-divider light></v-divider>
           <v-card-text class="headline">
-            <ul>
+            <ul class="pl-5">
               <li>My favorite languages are Kotlin and Rust</li>
               <li>I really like Jetbrains IDEs. (VSCode is cool too)</li>
               <li>My favorite part of my summer jobs was eating lunch with all the other devs</li>
