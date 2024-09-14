@@ -19,7 +19,7 @@
           </v-card-title>
           <v-divider light></v-divider>
           <v-card-text class="headline">
-            I am currently working at AWS, but I am usually looking for fun projects so feel free to reach out!
+            I am currently working at SS&C Advent, but I am usually looking for fun projects so feel free to reach out!
           </v-card-text>
         </v-card>
         <v-card class="ma-3" dark>
@@ -36,21 +36,18 @@
         </v-card>
         <v-card class="ma-3" dark>
           <v-card-title class="display-1">
-            Relevant Coursework
+            Software Familiarity
           </v-card-title>
           <v-divider light></v-divider>
           <v-card-text class="headline">
-            <ul class="pl-5">
-              <li>CPS 356: Operating Systems</li>
-              <li>CPS Special topics: Web 3.0 Semantics</li>
-              <li>CPS 472: Computer & Network Security</li>
-              <li>CPS Special topics: Secure Application Development</li>
-              <li>CPS 352: Concepts & Implementations of Programming Languages</li>
-              <li>CPS 490 & 491: Capstone</li>
-              <li>CPS 342: Emerging Programming Languages</li>
-              <li>MTH 301: Matrix Theory</li>
-              <li>MTH 361: Introduction to Abstract Algebra</li>
-            </ul>
+            <v-list>
+              <v-list-item-title>Java</v-list-item-title>
+              <v-list-item-title>Spring</v-list-item-title>
+              <v-list-item-title>GRPC</v-list-item-title>
+              <v-list-item-title>Python</v-list-item-title>
+              <v-list-item-title>Rust</v-list-item-title>
+              <v-list-item-title>Github Actions</v-list-item-title>
+            </v-list>
           </v-card-text>
         </v-card>
         <v-card class="ma-3" dark>

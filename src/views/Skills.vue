@@ -33,8 +33,19 @@ export default {
   data: () => ({
     experiences: [
       {
+        name: 'Senior Software Engineer at SS&C Advent',
+        dateRange: 'August 2023 - Present',
+        technologies: [
+          'Python',
+          'Java',
+          'Jenkins',
+          'Github Actions'
+        ],
+        desc: `Working on Genevaweb on DevOps and install scripts. Assisting in complex customer issues. Assisting in design and implementation of genevaweb services.`
+      },
+      {
         name: 'SDE II at Amazon Web Services',
-        dateRange: 'March 2022 - Present',
+        dateRange: 'March 2022 - July 2023',
         technologies: [
           'Rust',
           'Java',
