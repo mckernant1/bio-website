@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
+    "build-resume": "pdflatex -output-directory=resume/build resume/resume.tex && mv -v resume/build/resume.pdf public/Tom-McKernan-Resume-Web.pdf",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore"
