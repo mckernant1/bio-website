@@ -20,5 +20,5 @@ jobs:
           node-version: '22' # or your preferred Node version
       - name: Install
         run: |
-          npm run install
+          npm install
           npm run build
