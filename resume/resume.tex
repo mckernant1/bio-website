@@ -1,3 +1,6 @@
+%--------------------
+% Header
+%--------------------
 \documentclass[11pt]{article}
 \usepackage[margin=0.75in]{geometry}
 \usepackage{enumitem}
@@ -6,12 +9,12 @@
 \hypersetup{
     pdftitle={Tom McKernan - Software Engineer Resume},
     pdfauthor={Tom McKernan},
-    pdfkeywords={Python, Rust, Cloud, DevOps, Microservices, AWS, Kubernetes}
+    pdfkeywords={Python, Rust, Cloud, DevOps, Microservices, AWS, Kubernetes, CI/CD, Terraform, GitHub Actions, Jenkins, Docker}
 }
 
 % Formatting
-\renewcommand{\familydefault}{\sfdefault} % Sans serif for readability
-\setlist[itemize]{noitemsep, topsep=0pt} % Compact bullet lists
+\renewcommand{\familydefault}{\sfdefault}
+\setlist[itemize]{noitemsep, topsep=0pt}
 \pagestyle{empty}
 
 \begin{document}
@@ -30,66 +33,123 @@
 %--------------------
 % Summary
 %--------------------
-
-
     \section*{Professional Summary}
     Software Engineer with 5+ years of experience in cloud infrastructure, DevOps automation, and distributed systems.
-    Proven track record of optimizing AWS costs, reducing CPU and storage usage, and leading large-scale migrations.
-    Skilled in Java, Kotlin, and Python development with expertise in CI/CD pipelines, Kubernetes, and cloud-native solutions.
-    Adept at problem-solving, mentoring, and delivering high-performance systems that improve reliability and availability.
+    Skilled in Java, Kotlin, Python, and Rust, with expertise in CI/CD pipelines, Kubernetes, Docker, Terraform, AWS, and cloud-native solutions.
+    Proven track record of optimizing AWS costs, improving system performance, troubleshooting customer issues, and mentoring team members to enhance engineering practices.
 
 %--------------------
 % Skills
 %--------------------
-
     \section*{Skills}
     \textbf{Programming:} Java, Kotlin, Python, Rust, Bash \\
-    \textbf{Cloud \& DevOps:} AWS, Kubernetes, Docker, Helm, CloudFormation, GitHub Actions, Jenkins, CI/CD \\
+    \textbf{Cloud \& DevOps:} AWS (S3, DynamoDB, EKS, ECR, SQS), Kubernetes, Docker, Helm, CloudFormation, GitHub Actions, Jenkins, CI/CD, Terraform \\
     \textbf{Tools \& Frameworks:} Spring, Linux, Typescript, Git \\
     \textbf{Other:} Agile, Scrum, Mentoring, Problem-Solving, Ownership
 
 %--------------------
 % Experience
 %--------------------
-
-
     \section*{Experience}
 
-    \noindent\textbf{Senior Software Engineer} \hfill Aug 2023 -- Present \\
+    \noindent\textbf{Senior Software Engineer} \hfill 08/2023 -- Present \\
     SS\&C Advent
     \begin{itemize}
-        \item Migrated CI system to a new private cloud, ensuring scalability and reliability
-        \item Transitioned CI system from Jenkins to GitHub Actions for faster, modern pipelines
-        \item Developed custom TypeScript GitHub Actions to manage component builds
-        \item Maintained Python install scripts and Helm-based Kubernetes clusters
+        \item Migrated company CI systems and workflows from Jenkins to modern cloud-native pipelines with GitHub Actions, improving build reliability.
+        \item Built custom automation in TypeScript to standardize component builds across teams.
+        \item Managed Kubernetes deployments using Helm, reducing operational friction and improving rollout safety.
+        \item Maintained infrastructure-as-code workflows with Terraform and CloudFormation, improving repeatability of cluster configuration.
+        \item Maintained development environments, ensuring stability and reliability for all engineering teams.
+        \item Added monitoring and alerting to development environments, proactively detecting issues and reducing downtime.
+        \item Mentored engineers on CI/CD practices, pipeline design, and infrastructure-as-code workflows.
+        \item Collaborated with customer support and account teams to troubleshoot and resolve critical client issues, improving satisfaction and reducing production impact.
+        \item Partnered with development and QA teams to ensure seamless release coordination and reduce rollback incidents.
     \end{itemize}
 
-    \noindent\textbf{Software Engineer II} \hfill Mar 2022 -- Jul 2023 \\
+    \noindent\textbf{Software Engineer II} \hfill 03/2022 -- 07/2023 \\
     Amazon Web Services
     \begin{itemize}
-        \item Reduced AWS S3 usage by 60\% through storage optimization
-        \item Designed and reviewed code changes that improved customer metrics accuracy
-        \item Implemented custom Java data structures, lowering CPU usage by 20\%
-        \item Built new features to decrease IOPS and improve customer availability
-        \item Maintained global regional parity through CI/CD automation
-        \item Analyzed and compared storage engines and databases for scalability
+        \item Analyzed and optimized AWS S3 usage patterns, reducing monthly storage costs by 60\%.
+        \item Designed high-performance Java data structures to improve CPU efficiency by 20\%.
+        \item Partnered with cross-team stakeholders to deliver features that improved real-time availability metrics.
+        \item Automated global parity and scalability through improved CI/CD processes with Amazon's Internal Tooling.
+        \item Implemented a TTL system with a distributed locking mechanism for scanning and expiring database items, improving data consistency and reliability.
+        \item Developed internal tooling in Python and Java for collecting logs and internal metrics, streamlining debugging and operational workflows.
+        \item Served as on-call engineer for production systems, responding to incidents, troubleshooting issues, and ensuring high availability and reliability for customers.
+        \item Collaborated on a Rust storage engine and performance testing, working with senior engineers to improve system throughput and scalability.
     \end{itemize}
 
-    \noindent\textbf{Software Engineer I} \hfill Feb 2020 -- Mar 2022 \\
+    \noindent\textbf{Software Engineer I} \hfill 02/2020 -- 03/2022 \\
     Amazon Web Services
     \begin{itemize}
-        \item Upgraded large-scale Python applications from 2.7 to 3.4, preventing EOL issues
-        \item Built and launched CloudWatch Contributor Insights for DynamoDB on CloudFormation
-        \item Resolved DynamoDB throttling by analyzing logs and metrics for customers
-        \item Automated ticket enrichment using tooling packages and bots
+        \item Upgraded Python systems from 2.7 to 3.x, preventing EOL issues and security vulnerabilities.
+        \item Built and launched CloudWatch Contributor Insights dashboards for DynamoDB using CloudFormation.
+        \item Investigated and resolved persistent DynamoDB throttling using logs and metrics analysis.
+        \item Implemented automation for ticket data enrichment using custom Python tooling.
+        \item Served as on-call engineer for production systems, responding to incidents, troubleshooting issues, and ensuring high availability and reliability for customers.
     \end{itemize}
+
+    \noindent\textbf{Software Engineer Intern - Back End Team} \hfill 05/2019 -- 08/2019 \\
+    Peapod Digital Labs
+    \begin{itemize}
+        \item Built and maintained a sidecar service supporting Peapod microservices, improving modularity and deployment flexibility.
+        \item Researched Docker and Kubernetes to support migration from monolithic architecture to microservices.
+        \item Conducted performance testing using Gatling and Vegeta to identify bottlenecks and optimize service latency.
+        \item Developed internal full-stack applications to automate CRUD operations and improve team efficiency.
+    \end{itemize}
+
+    \vspace{2mm}
+
+    \noindent\textbf{Software Engineer Intern - Front End Team} \hfill 06/2018 -- 03/2019 \\
+    Peapod Digital Labs
+    \begin{itemize}
+        \item Developed a reusable Vue.js component library to standardize UI elements across web applications.
+        \item Researched integration strategies for Vue and Angular frameworks to support hybrid projects.
+        \item Investigated cross-platform frameworks including NativeScript, Xamarin Forms, and Flutter for mobile app development.
+        \item Collaborated with the front-end team to implement unit tests, ensuring component reliability and maintainability.
+    \end{itemize}
+
+
+    \section*{Projects}
+
+    \noindent\textbf{League of Legends Esports Platform} — Discord Bot, API Service, Data Loader, and OpenAPI Specification
+    \begin{itemize}
+        \item Designed and built an end-to-end esports data platform consisting of a Kotlin-based Discord bot, a backend API service, and a formal OpenAPI specification.
+        \item Developed a feature-rich Discord bot providing match schedules, results, standings, user predictions, and personalized settings for global esports regions.
+        \item Implemented a backend API service responsible for data aggregation, normalization, caching, and persistence, decoupling Discord interactions from business logic.
+        \item Authored a comprehensive OpenAPI specification to standardize service contracts, enable client generation, and improve maintainability.
+        \item Integrated with third-party esports data providers and handled region-specific formats, time zones, and tournament structures.
+        \item Designed persistent storage and stateful workflows to support concurrent users and prediction tracking.
+    \end{itemize}
+
+    \vspace{4mm}
+
+    \noindent\textbf{Infrastructure Libraries \& Platform Tooling} — Kotlin Utilities, Metrics, and Public Infrastructure
+    \begin{itemize}
+        \item Developed and maintained shared Kotlin utility libraries to standardize patterns across services, including configuration handling, logging, error modeling, and concurrency primitives.
+        \item Built a lightweight metrics framework to simplify instrumentation and expose consistent telemetry for monitoring and alerting.
+        \item Designed metrics abstractions to support multiple backends while minimizing coupling.
+        \item Created and managed public infrastructure repositories defining reusable CI/CD workflows, infrastructure templates, and operational conventions.
+        \item Codified infrastructure and release practices to improve consistency, reliability, and onboarding across projects.
+        \item Emphasized strong typing, composability, and clear APIs to reduce duplication and operational risk in distributed systems.
+        \item Designed AWS CDK-based deployment pipelines to automate the release of shared libraries and infrastructure components.
+        \item Integrated GitHub-native security tooling to enforce dependency updates and prevent vulnerable artifacts from being released.
+    \end{itemize}
+
+    \vspace{4mm}
+
+    \noindent\textbf{Kotlin/Spring gRPC}
+    \begin{itemize}
+        \item Improved gRPC error handling in the grpc-spring library by implementing proper exception translation and mapping between \texttt{ResponseStatusException} and gRPC \texttt{Status} codes.
+        \item Contributed to fixing \texttt{SecurityContextHolder} for kotlin coroutine based grpc services.
+    \end{itemize}
+
 
 %--------------------
 % Education
 %--------------------
-
     \section*{Education}
-    \textbf{University of Dayton} \hfill Aug 2016 -- Dec 2019 \\
+    \textbf{University of Dayton} \hfill 08/2016 -- 12/2019 \\
     B.S.\ Computer Science, Minor in Mathematics
 
 \end{document}
