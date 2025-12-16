@@ -13,7 +13,7 @@
           <v-card-text>
             <h3>Technologies Used</h3>
             <ul class="pl-5">
-              <li v-for="(tech, index) in experience.technologies" :key="index">{{ tech }}</li>
+              <li v-for="(tech, tIndex) in experience.technologies" :key="tIndex">{{ tech }}</li>
             </ul>
             <br/>
             <h3>Description</h3>
@@ -27,78 +27,114 @@
 </template>
 
 <script>
-
 export default {
-  name: 'Skills',
+  name: 'Experience',
   data: () => ({
     experiences: [
       {
         name: 'Senior Software Engineer at SS&C Advent',
-        dateRange: 'August 2023 - Present',
+        dateRange: 'Aug 2023 - Present',
         technologies: [
           'Python',
           'Java',
-          'Jenkins',
-          'Github Actions'
+          'TypeScript',
+          'Kubernetes',
+          'Helm',
+          'Terraform',
+          'GitHub Actions',
+          'CI/CD'
         ],
-        desc: `Working on Genevaweb on DevOps and install scripts. Assisting in complex customer issues. Assisting in design and implementation of genevaweb services.`
+        desc: `Migrated CI systems from Jenkins to cloud-native pipelines with GitHub Actions and built TypeScript automation.
+Managed Kubernetes deployments and maintained infrastructure-as-code workflows with Terraform and CloudFormation.
+Maintained development environments with monitoring and alerting.
+Mentored engineers on CI/CD practices and infrastructure.
+Collaborated with customer support and account teams to troubleshoot and resolve client issues, ensuring high reliability.`
       },
       {
-        name: 'SDE II at Amazon Web Services',
-        dateRange: 'March 2022 - July 2023',
+        name: 'Software Engineer II at Amazon Web Services',
+        dateRange: 'Mar 2022 - Jul 2023',
         technologies: [
+          'Java',
+          'Python',
           'Rust',
-          'Java',
-          'Aws Cdk'
+          'AWS (S3, DynamoDB, EKS, ECR, SQS)',
+          'GitHub Actions',
+          'Jenkins',
+          'CI/CD',
+          'Terraform',
+          'Distributed Systems'
         ],
-        desc: `A Slightly larger role where I started to mentor other people who have joined the org.
-        More design reviews and looking over other peoples work. As well as building out new canaries with Aws CDK.`
+        desc: `Optimized AWS S3 usage reducing monthly storage costs by 60%.
+Designed high-performance Java data structures to improve CPU efficiency.
+Implemented TTL system with distributed locking for database partitions.
+Developed internal tooling in Python and Java for logs and metrics.
+Automated global parity and scalability with CI/CD pipelines.
+Served as on-call engineer, responding to production incidents and ensuring system reliability.
+Mentored engineers and performed design reviews for new systems.`
       },
       {
-        name: 'SDE I at Amazon Web Services',
-        dateRange: 'February 2020 - March 2022',
+        name: 'Software Engineer I at Amazon Web Services',
+        dateRange: 'Feb 2020 - Mar 2022',
         technologies: [
           'Java',
           'Python',
-          'Apache Spark'
+          'CloudFormation',
+          'DynamoDB',
+          'CloudWatch',
+          'Distributed Systems'
         ],
-        desc: `I am an SDE at AWS currently working on DynamoDB. Lots of working on distributed systems.
-        Lots of complicated design docs and review processes to make sure the cloud is safe.`
+        desc: `Upgraded Python systems from 2.7 to 3.x to avoid EOL and security issues.
+Built CloudWatch Contributor Insights dashboards for DynamoDB using CloudFormation.
+Investigated and resolved DynamoDB throttling incidents.
+Automated ticket data enrichment with custom tooling.
+Served as on-call engineer for production systems.`
+      },
+      {
+        name: 'Software Engineer Intern - Back End Team at Peapod Digital Labs',
+        dateRange: 'May 2019 - Aug 2019',
+        technologies: [
+          'Kotlin',
+          'Python',
+          'Docker',
+          'Kubernetes',
+          'Gatling',
+          'Vegeta'
+        ],
+        desc: `Built and maintained a sidecar service for Peapod microservices.
+Researched Docker and Kubernetes for migration to microservices.
+Conducted performance testing with Gatling and Vegeta.
+Developed internal full-stack applications to automate CRUD operations.`
+      },
+      {
+        name: 'Software Engineer Intern - Front End Team at Peapod Digital Labs',
+        dateRange: 'Jun 2018 - Mar 2019',
+        technologies: [
+          'Vue.js',
+          'Angular',
+          'NativeScript',
+          'Flutter',
+          'Xamarin Forms'
+        ],
+        desc: `Developed a reusable Vue.js component library to standardize UI elements.
+Researched integration strategies for Vue and Angular frameworks.
+Investigated cross-platform frameworks including NativeScript, Xamarin Forms, and Flutter.
+Collaborated with front-end team to implement unit tests.`
       },
       {
         name: 'Personal Projects',
-        dateRange: 'Always :]',
+        dateRange: 'Ongoing',
         technologies: [
           'Kotlin',
           'Rust',
-          'AWS (ECS, Amplify, CodePipeline, and a mix of others)',
-          'Homebrew',
-          'Angular'
+          'AWS (ECS, Amplify, CDK, CodePipeline)',
+          'Discord Bots',
+          'Spring',
+          'TypeScript',
+          'Vue.js'
         ],
-        desc: `I work on a lot of personal projects from discord bots to websites.
-        Check out my Github in the top right!
-        This site was created with Vue.js and deployed with AWS Amplify`
-      },
-      {
-        name: 'SDE Intern at Peapod',
-        dateRange: 'June 2018 - August 2019',
-        technologies: [
-          'Kotlin',
-          'Rust',
-          'Vue.js',
-          'Spring Framework'
-        ],
-        desc: `I worked at Peapod with the Platform team to improve some internal tools`
-      },
-      {
-        name: 'Assistant Database Administrator at Northwestern University',
-        dateRange: 'June 2016 - February 2020',
-        technologies: [
-          'Excel',
-          'Python',
-          'AutoCAD'
-        ],
-        desc: `My High School job. Did a lot of data entry, used python to help!`
+        desc: `Developed League of Legends Esports Platform including Discord Bot, backend API service, and OpenAPI specification.
+Built shared Kotlin utility libraries, metrics framework, and public infrastructure tooling.
+This site is built with Vue.js and deployed on AWS Amplify. Check out my GitHub for more projects!`
       }
     ]
   })
@@ -106,5 +142,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
